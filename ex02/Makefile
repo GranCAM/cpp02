@@ -11,10 +11,10 @@ obj = $(src:.cpp=.o)
 all: $(name)
 
 $(name): $(obj)
-	$(CXX) $(cxx) -o $@ $^
+	$(CXX) $(cxxflags) -o $@ $^
 
 %.o: %.cpp
-	$(CXX) $(cxx) -c $< -o $@
+	$(CXX) $(cxxflags) -c $< -o $@
 
 clean:
 	rm -f $(obj)
